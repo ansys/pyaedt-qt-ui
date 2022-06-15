@@ -1,23 +1,30 @@
 """Sphinx documentation configuration file."""
 from datetime import datetime
 
-from ansys.product.library import __version__
 from pyansys_sphinx_theme import pyansys_logo_black
 
+from ansys.aedt_qt_ui.library import __version__
+
 # Project information
-project = "ansys-product-library"
+project = "ansys-aedt-qt-ui-library"
 copyright = f"(c) {datetime.now().year} ANSYS, Inc. All rights reserved"
-author = "Ansys Inc."
+author = "ANSYS, Inc."
 release = version = __version__
 
 # use the default pyansys logo
 html_logo = pyansys_logo_black
 html_theme = "pyansys_sphinx_theme"
 
+html_short_title = html_title = "ansys-aedt-qt-ui-library"
+
 # specify the location of your github repo
 html_theme_options = {
-    "github_url": "https://github.com/pyansys/pyansys-sphinx-theme",
+    "github_url": "https://github.com/pyansys/pyaedt-qt-ui",
     "show_prev_next": False,
+    "show_breadcrumbs": True,
+    "additional_breadcrumbs": [
+        ("PyAnsys", "https://docs.pyansys.com/"),
+    ],
 }
 
 # Sphinx extensions
@@ -38,6 +45,7 @@ intersphinx_mapping = {
     # "matplotlib": ("https://matplotlib.org/stable", None),
     # "pandas": ("https://pandas.pydata.org/pandas-docs/stable", None),
     # "pyvista": ("https://docs.pyvista.org/", None),
+    # "grpc": ("https://grpc.github.io/grpc/python/", None),
 }
 
 # numpydoc configuration
