@@ -39,7 +39,7 @@ How to install
 
 In order to run the examples you will need to install several libraries :
 
-- Python (up to 3.9)
+- Python (up to 3.10)
 - pyaedt (https://pypi.org/project/pyaedt/)
 - pyvistaqt (https://pypi.org/project/pyvistaqt/)
 - pyqt5 (https://pypi.org/project/PyQt5/)
